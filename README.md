@@ -40,7 +40,7 @@ python3 download.py
 ```
 python3 main.py
 ```
-4. Delete .mp4 video file.
+4. Delete .mp4 video file from directory so that you can download the next video.
 
 # Sample
 
