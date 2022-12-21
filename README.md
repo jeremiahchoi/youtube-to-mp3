@@ -49,3 +49,13 @@ python3 main.py
 - "My Video" is the name of the video file.
 - The first time stamp "00:01:00" indicates that the audio will start at the 1 minute mark of the video. 
 - The second time stamp "00:02:00" indicates that the audio will end at the 2 minute mark of the video.
+
+# From ChatGPT
+
+This script uses the ffmpeg command line tool to convert videos to the MP3 audio format. It has a dictionary called vids that maps the names of the videos to tuples containing start and end times for trimming the audio.
+
+The convert_vid function iterates over the dictionary, using the key as the name of the input video file (vid_name) and the value as the start and end times for trimming (val). It then calls ffmpeg to convert the input video file to an MP3 file with the same name (out_name). It then calls ffmpeg again to trim the audio file between the start and end times specified in the val tuple and save the trimmed audio file with the name out_trimmed_name.
+
+The script also has an if block at the bottom that calls the convert_vid function when the script is run.
+
+Note: This script assumes that the ffmpeg tool is installed on the machine running the script and is available in the system's PATH. It also assumes that the input video files and the script are in the same directory.
